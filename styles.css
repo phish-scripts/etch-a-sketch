@@ -4,18 +4,22 @@
     box-sizing: border-box;
 }
 
+
+/* holds the grid*/
 .container
 {
     display: flex;
     flex-direction: column;
 }
 
+/* contains the boxes */
 .row
 {
     display: flex;
 
 }
 
+/* the box */
 .column
 {
     height: 20px; 
@@ -23,14 +27,18 @@
     border: 1px solid black;
 }
 
-.ink
-{
-    background: none;
-}
 
-.ink:hover
+/* This class gets added to the div on hover, to turn the div black */
+.ink
 {
     background: black;
 }
+
+.reset
+{
+    display: flex;
+    justify-content: center;
+}
+
 
 
