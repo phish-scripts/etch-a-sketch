@@ -45,14 +45,49 @@ function addInk()
 // reset button
 let resetButton = document.getElementById("reset");
 resetButton.addEventListener("click", () => {
-    console.log("Pressed the reset button");
+    console.log("Pressed the reset button");    
     let xcoord = window.prompt("How many squares as the width?");
     let ycoord = window.prompt("How many squares for the height?");
-    console.log("width: " + xcoord);
-    console.log("height: " + ycoord);
 
-    createGrid(xcoord, ycoord);
+    if (xcoord && ycoord > 32)
+    {
+        alert("thats WAYYYYY too many squares. you are sticking with the old grid buddy.")
+    }
+    else
+    {
+        deleteGrid()
+        createGrid(xcoord, ycoord);
+        console.log("width: " + xcoord);
+        console.log("height: " + ycoord);
+    }
+
+
 
 
 })
+
+
+// the Delete Grid function
+function deleteGrid()
+{
+    let counter = 0;
+    console.log("Refreshing the etch-a-sketch...")
+    
+    // This selects all rows within the DOM
+    let rowsDeleted = document.querySelectorAll(".row")
+    // a pointer that starts at the head of the list of "row" elements
+    let parentNode = rowsDeleted[0].parentNode;
+
+    // this forEach function iterates through the list of "rows", and deletes them
+    rowsDeleted.forEach((node) => {
+        let parentNode = node.parentNode;
+        // tells the parentNode to remove the node from the webpage
+        parentNode.removeChild(node);
+        counter++;
+    })
+    console.log(counter + " row(s) deleted");
+
+}
+
+
 

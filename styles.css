@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: monospace;
 }
 
 
@@ -16,6 +17,7 @@
 .row
 {
     display: flex;
+    justify-content: center;
 
 }
 
@@ -23,7 +25,7 @@
 .column
 {
     height: 20px; 
-    flex: 1; 
+    width: 20px;
     border: 1px solid black;
 }
 
@@ -34,10 +36,44 @@
     background: black;
 }
 
+/* Reset Button */
 .reset
 {
     display: flex;
     justify-content: center;
+    margin-top: 10px;
+}
+
+#reset
+{
+    background-color: rgb(255, 104, 104);
+    border: none;
+    padding: 10px
+}
+
+#reset:hover
+{
+    background-color: rgb(255, 61, 61);
+}
+
+/* Etch-a-Sketch Title */
+.header
+{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+}
+
+/* credits */
+.credits
+{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    margin: 10px;
+    width: 300px;
+    padding: 20px
 }
 
 
