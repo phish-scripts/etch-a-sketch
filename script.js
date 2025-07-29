@@ -3,6 +3,7 @@
 let container1 = document.querySelector(".container");
 function createGrid(xcoord, ycoord)
 {
+
     console.log("running createGrid()")
     for (let i = 1; i <= xcoord; i++)
     {
@@ -17,11 +18,12 @@ function createGrid(xcoord, ycoord)
             row.append(column);
         }
     }
+
     addInk();
     console.log("a " + xcoord + "x" + ycoord+" grid has been created.");
 }
 
-createGrid(16,16)
+createGrid(24,24)
 
 // on hover, change the color of a div
 // document.querySelectorAll(".column").forEach(column => column.classList.add("ink"));
@@ -32,13 +34,18 @@ const grid = document.querySelectorAll(".column");
 function addInk()
 {
     const grid = document.querySelectorAll(".column");
+    // iterates through each box and adds an event listener to the box
     for (box of grid)
     {
+        // the box is given the ink class when hovered over
         box.addEventListener("mouseover", (event) => 
         { 
             event.target.classList.add("ink");
         })
+
+        
     }
+    
 }
 
 
