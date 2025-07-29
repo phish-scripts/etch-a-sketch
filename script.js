@@ -23,7 +23,7 @@ function createGrid(xcoord, ycoord)
     console.log("a " + xcoord + "x" + ycoord+" grid has been created.");
 }
 
-createGrid(24,24)
+createGrid(16,16)
 
 // on hover, change the color of a div
 // document.querySelectorAll(".column").forEach(column => column.classList.add("ink"));
