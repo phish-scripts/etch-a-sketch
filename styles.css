@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=VT323&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: monospace;
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+    
 }
 
 
@@ -12,6 +17,8 @@
     margin-top: 20px; 
     display: flex;
     flex-direction: column;
+    
+    
 }
 
 /* contains the boxes */
@@ -69,12 +76,15 @@
     width: 350px;
     margin-left: auto;
     margin-right: auto;
+    background-color: black;
 }
 #header
 {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    background-color: black;
+    color: whitesmoke;
 }
 
 /* credits */
@@ -89,6 +99,14 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
+    text-align: center;
+}
+
+
+.bodyContainer
+{
+    height: 50vh;
+    margin-top: 25%;
 }
 
 
